@@ -23,7 +23,7 @@ namespace Template.mod
 
 		public static string GetName ()
 		{
-            return "TradeChatColors";
+            return "ChatColors";
 		}
 
 		public static int GetVersion ()
