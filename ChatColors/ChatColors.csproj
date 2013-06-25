@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7DF5DEE9-EA96-4095-9EC2-D237C0B888BB}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Template.mod</RootNamespace>
-    <AssemblyName>Template.mod</AssemblyName>
+    <RootNamespace>ChatColors</RootNamespace>
+    <AssemblyName>ChatColors</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

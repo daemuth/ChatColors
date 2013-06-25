@@ -6,7 +6,8 @@ using UnityEngine;
 using Mono.Cecil;
 using System.Collections.Generic;
 using System.Linq;
-namespace Template.mod
+
+namespace ChatColors
 {
 	public class ChatColors : BaseMod
 	{
@@ -16,10 +17,7 @@ namespace Template.mod
         //initialize everything here, Game is loaded at this point
 		public ChatColors ()
 		{
-            string commonSellTerm = "WTS";
-            App.ArenaChat.RoomEnter("Levela");
 		}
-
 
 		public static string GetName ()
 		{
@@ -77,14 +75,11 @@ namespace Template.mod
                         rcmm.text = firstRegex.Replace(rcmm.text, "<color=#f1f425>$&</color>");
                         rcmm.text = rcmm.text.ToString().Replace(x, "<color=#4eff43>" + x.ToString() + "</color>");     
                     }
-                }
-
-  
-                
+                }                
             }
+
             else
-            {
-                
+            {            
         
             }
 
