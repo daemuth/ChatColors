@@ -1,0 +1,8 @@
+D:\Cloud\Dropbox\Scrolls mods\Template.mod\Template.mod\bin\Release\Template.mod.dll
+D:\Cloud\Dropbox\Scrolls mods\Template.mod\Template.mod\bin\Release\Assembly-CSharp.dll
+D:\Cloud\Dropbox\Scrolls mods\Template.mod\Template.mod\bin\Release\Microsoft.QualityTools.Testing.Fakes.dll
+D:\Cloud\Dropbox\Scrolls mods\Template.mod\Template.mod\bin\Release\Mono.Cecil.dll
+D:\Cloud\Dropbox\Scrolls mods\Template.mod\Template.mod\bin\Release\ScrollsModLoader.Interfaces.dll
+D:\Cloud\Dropbox\Scrolls mods\Template.mod\Template.mod\bin\Release\UnityEngine.dll
+D:\Cloud\Dropbox\Scrolls mods\Template.mod\Template.mod\obj\Release\Template.mod.dll
+D:\Cloud\Dropbox\Scrolls mods\Template.mod\Template.mod\obj\Release\Template.mod.csprojResolveAssemblyReference.cache
