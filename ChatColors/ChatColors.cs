@@ -11,8 +11,8 @@ namespace ChatColors
 {
 	public class ChatColors : BaseMod
 	{
-        List<string> sellWords = new List<string> {"WTS", "Selling", "wts", "selling"};
-        List<string> buyWords = new List<string> {"WTB", "Buying", "wtb", "buying" };
+        List<string> sellWords = new List<string> {"WTS", "Selling", "wts", "selling", "SELLING"};
+        List<string> buyWords = new List<string> {"WTB", "Buying", "wtb", "buying", "BUYING"};
 		
         //initialize everything here, Game is loaded at this point
 		public ChatColors ()
@@ -49,7 +49,7 @@ namespace ChatColors
 		
 		public override bool BeforeInvoke (InvocationInfo info, out object returnValue)
 		{
-            returnValue = 0; 
+            returnValue = null;
 
             if (info.targetMethod.Equals("ChatMessage")) // ChatMessage (received) in ChatRooms
             {
