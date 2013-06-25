@@ -9,7 +9,17 @@ using System.Linq;
 
 namespace ChatColors
 {
-	public class ChatColors : BaseMod
+ /*  ___  _           _      ___       _               
+    / __|| |_   __ _ | |_   / __| ___ | | ___  _ _  ___
+   | (__ | ' \ / _` ||  _| | (__ / _ \| |/ _ \| '_|(_-<
+    \___||_||_|\__,_| \__|  \___|\___/|_|\___/|_|  /__/                                                    
+
+                    mod by levela.
+              Inspired by the idea of vimes.
+                 www.scrollsguide.com
+   */
+
+    public class ChatColors : BaseMod
 	{
         List<string> sellWords = new List<string> {"WTS", "Selling", "wts", "selling", "SELLING"};
         List<string> buyWords = new List<string> {"WTB", "Buying", "wtb", "buying", "BUYING"};
