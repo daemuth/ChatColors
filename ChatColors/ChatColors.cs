@@ -65,7 +65,7 @@ namespace ChatColors
             {
                 RoomChatMessageMessage rcmm = (RoomChatMessageMessage)info.arguments[0];
 
-                string strRegex = @"\d+(gold|g|\sgold|\sg|)\b";
+                string strRegex = @"\b\d+(gold|g|\sgold|\sg|)\b";
                 RegexOptions myRegexOptions = RegexOptions.IgnoreCase;
                 Regex firstRegex = new Regex(strRegex, myRegexOptions);
 
