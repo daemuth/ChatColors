@@ -5,3 +5,7 @@ D:\Cloud\Dropbox\Scrolls mods\Template.mod\Template.mod\bin\Release\ScrollsModLo
 D:\Cloud\Dropbox\Scrolls mods\Template.mod\Template.mod\bin\Release\UnityEngine.dll
 D:\Cloud\Dropbox\Scrolls mods\Template.mod\Template.mod\bin\Release\ChatColors.dll
 D:\Cloud\Dropbox\Scrolls mods\Template.mod\Template.mod\obj\Release\ChatColors.dll
+d:\Cloud\Dropbox\Scrolls mods\Template.mod\ChatColors\bin\Release\ChatColors.dll
+d:\Cloud\Dropbox\Scrolls mods\Template.mod\ChatColors\bin\Release\Microsoft.QualityTools.Testing.Fakes.dll
+d:\Cloud\Dropbox\Scrolls mods\Template.mod\ChatColors\obj\Release\ChatColors.csprojResolveAssemblyReference.cache
+d:\Cloud\Dropbox\Scrolls mods\Template.mod\ChatColors\obj\Release\ChatColors.dll
