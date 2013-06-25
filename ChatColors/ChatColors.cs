@@ -36,7 +36,7 @@ namespace ChatColors
 
 		public static int GetVersion ()
 		{
-            return 1;
+            return 2;
 		}
 
 		//only return MethodDefinitions you obtained through the scrollsTypes object
