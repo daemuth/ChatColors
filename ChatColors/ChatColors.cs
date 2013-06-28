@@ -63,7 +63,9 @@ namespace ChatColors
                 
                 RoomChatMessageMessage rcmm = (RoomChatMessageMessage)info.arguments[0];
 
-                if (rcmm.roomName.ToLower().Contains("trading")) //Restrict to trading rooms only
+                String roomName = rcmm.roomName.ToLower();
+
+                if (roomName.Contains("trading") || roomName.Contains("wtb")) //Restrict to trading rooms only
                 { 
                     string goldRegexString = @"\b\d+(gold|g|\sgold|\sg|)\b";
                     string sellRegexString = @"\b(WTS)(ell)?(ing)?|(sell)(ing)?\b";
