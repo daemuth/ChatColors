@@ -22,8 +22,12 @@ namespace ChatColors
     public class ChatColors : BaseMod
 	{
         //initialize everything here, Game is loaded at this point
+        private List<String> watchedRooms = new List<string>();
+
 		public ChatColors ()
 		{
+            watchedRooms.Add("trading");
+            watchedRooms.Add("wtb");
 		}
 
 		public static string GetName ()
@@ -58,23 +62,27 @@ namespace ChatColors
             if (info.targetMethod.Equals("ChatMessage")) // ChatMessage (received) in ChatRooms
             {                
                 RoomChatMessageMessage rcmm = (RoomChatMessageMessage)info.arguments[0];
+                String roomName = rcmm.roomName.ToLower();
 
-                if (rcmm.roomName.ToLower().Contains("trading")) //Restrict to trading rooms only
-                { 
-                    string goldRegexString = @"\b\d+(gold|g|\sgold|\sg|)\b";
-                    string sellRegexString = @"\b(WTS)(ell)?(ing)?|(sell)(ing)?\b";
-                    string buyRegexString = @"\b(WTB)(uy)?(ing)?|(buy)(ing)?\b";
+                foreach (String roomToCheck in watchedRooms)
+                {
+                    if (roomName.Contains(roomToCheck)) //Restrict to trading rooms only
+                    { 
+                        string goldRegexString = @"\b\d+(gold|g|\sgold|\sg|)\b";
+                        string sellRegexString = @"\b(WTS)(ell)?(ing)?|(sell)(ing)?\b";
+                        string buyRegexString = @"\b(WTB)(uy)?(ing)?|(buy)(ing)?\b";
 
-                    RegexOptions ignoreCase = RegexOptions.IgnoreCase;
+                        RegexOptions ignoreCase = RegexOptions.IgnoreCase;
 
-                    Regex goldRegex = new Regex(goldRegexString, ignoreCase);
-                    Regex sellRegex = new Regex(sellRegexString,ignoreCase);
-                    Regex buyRegex = new Regex(buyRegexString, ignoreCase);
+                        Regex goldRegex = new Regex(goldRegexString, ignoreCase);
+                        Regex sellRegex = new Regex(sellRegexString,ignoreCase);
+                        Regex buyRegex = new Regex(buyRegexString, ignoreCase);
               
-                    rcmm.text = sellRegex.Replace(rcmm.text, "<color=#ff4343>$&</color>");
-                    rcmm.text = buyRegex.Replace(rcmm.text, "<color=#4eff43>$&</color>");
-                    rcmm.text = goldRegex.Replace(rcmm.text, "<color=#f1f425>$&</color>");
+                        rcmm.text = sellRegex.Replace(rcmm.text, "<color=#ff4343>$&</color>");
+                        rcmm.text = buyRegex.Replace(rcmm.text, "<color=#4eff43>$&</color>");
+                        rcmm.text = goldRegex.Replace(rcmm.text, "<color=#f1f425>$&</color>");
 
+                    }
                 }
                  
             }
