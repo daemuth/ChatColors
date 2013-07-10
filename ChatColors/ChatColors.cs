@@ -36,8 +36,6 @@ namespace ChatColors
             return 3;
 		}
 
-		//only return MethodDefinitions you obtained through the scrollsTypes object
-		//safety first! surround with try/catch and return an empty array in case it fails
 		public static MethodDefinition[] GetHooks (TypeDefinitionCollection scrollsTypes, int version)
 		{
             try
@@ -48,7 +46,6 @@ namespace ChatColors
             }
             catch
             {
-                Console.WriteLine("Fail van!");
                 return new MethodDefinition[] { };
             }
 		}
@@ -59,8 +56,7 @@ namespace ChatColors
             returnValue = null;
 
             if (info.targetMethod.Equals("ChatMessage")) // ChatMessage (received) in ChatRooms
-            {
-                
+            {                
                 RoomChatMessageMessage rcmm = (RoomChatMessageMessage)info.arguments[0];
 
                 if (rcmm.roomName.ToLower().Contains("trading")) //Restrict to trading rooms only
