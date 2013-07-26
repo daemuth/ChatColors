@@ -9,19 +9,21 @@ using System.Linq;
 
 namespace ChatColors
 {
- /*  ___  _           _      ___       _               
+
+ /*  _    _           _      ___       _               
     / __|| |_   __ _ | |_   / __| ___ | | ___  _ _  ___
    | (__ | ' \ / _` ||  _| | (__ / _ \| |/ _ \| '_|(_-<
     \___||_||_|\__,_| \__|  \___|\___/|_|\___/|_|  /__/                                                    
 
                     mod by levela.
-              Inspired by the idea of vimes.
+             Inspired by the idea of vimes.
+               Thanks fly out to: icbat
                  www.scrollsguide.com
+                
    */
 
     public class ChatColors : BaseMod
 	{
-        //initialize everything here, Game is loaded at this point
         private List<String> watchedRooms = new List<string>();
 
 		public ChatColors ()
@@ -55,10 +57,8 @@ namespace ChatColors
 		}
 
 		
-		public override bool BeforeInvoke (InvocationInfo info, out object returnValue)
+		public override void BeforeInvoke (InvocationInfo info)
 		{
-            returnValue = null;
-
             if (info.targetMethod.Equals("ChatMessage")) // ChatMessage (received) in ChatRooms
             {                
                 RoomChatMessageMessage rcmm = (RoomChatMessageMessage)info.arguments[0];
@@ -66,7 +66,7 @@ namespace ChatColors
 
                 foreach (String roomToCheck in watchedRooms)
                 {
-                    if (roomName.Contains(roomToCheck)) //Restrict to trading rooms only
+                    if (roomName.Contains(roomToCheck)) //Restrict to watched rooms only
                     { 
                         string goldRegexString = @"\b\d+(gold|g|\sgold|\sg|)\b";
                         string sellRegexString = @"\b(WTS)(ell)?(ing)?|(sell)(ing)?\b";
@@ -87,12 +87,12 @@ namespace ChatColors
                  
             }
 
-            return false;
+            return;
 		}
 
 		public override void AfterInvoke (InvocationInfo info, ref object returnValue)
 		{
-			
+            return;
 		}
 	}
 }
